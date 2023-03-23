@@ -2,22 +2,26 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CreatLoguinComponent } from './parts/creat-loguin/creat-loguin.component';
+import { LoginComponent } from './pages/login/login.component';
+import { CreatComponent } from './pages/creat/creat.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot([
-      { path: '', component: CreatLoguinComponent},
-      { path: 'login', component: CreatLoguinComponent}
+      { path: '', component: LoginComponent},
+      { path: 'create', component: CreatComponent }
     ])
+  ],  
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    CreatComponent,
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

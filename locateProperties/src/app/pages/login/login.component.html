@@ -1,0 +1,12 @@
+<div class="header center">
+  <p>
+    Aluguel Certo
+    Logar
+  </p>  
+</div>
+<form class="center" [formGroup]="form" (submit)="onSubmit()">
+    <input type="email" name="email" id="email" formControlName="email" placeholder="E-mail" required >
+    <input type="password" name="password" id="password" formControlName="password" placeholder="Password" required >
+    <input type="submit" value="Logar">
+  </form>
+  <a class="center" href="create"> Fazer o cadastro </a>

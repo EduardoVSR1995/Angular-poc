@@ -1,0 +1,13 @@
+<div class="header center">
+    <p>
+      Aluguel Certo
+      Criar conta
+    </p>  
+    </div>
+    <form class="center" [formGroup]="form" (submit)="onSubmit()">
+        <input type="email" name="email" formControlName="email" placeholder="E-mail" required />
+        <input type="password" name="password" formControlName="password" placeholder="Password" required />
+        <input type="text" pattern="^\d{5}-\d{3}$" name="cep" formControlName="cep" placeholder="Cep" required />
+        <input type="submit" value="Cadastro">
+    </form>
+    <a class="center" href="/"> Fazer o login </a>

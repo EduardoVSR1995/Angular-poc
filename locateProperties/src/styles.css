@@ -26,6 +26,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	background-image: url("https://files.sunoresearch.com.br/p/uploads/2018/12/FUNDOS-IMOBILIARIOS-RENTABILIDADE-1.jpg");
 }
 ol, ul {
 	list-style: none;
@@ -39,6 +40,7 @@ q:before, q:after {
 	content: none;
 }
 *{
+	font-size: 20px;
 	font-family: 'Alkatra', cursive;
 	box-sizing: border-box;
 }
@@ -53,4 +55,18 @@ strong {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+
+@media(max-width:1000px){
+    .header{
+        height: 200px;
+    }
+	*{
+		font-size: 40px;
+	}
+
 }
