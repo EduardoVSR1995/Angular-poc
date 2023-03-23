@@ -1,0 +1,42 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# Compiled output
+/locateProperties/dist
+/locateProperties/tmp
+/locateProperties/out-tsc
+/locateProperties/bazel-out
+
+# Node
+/locateProperties/node_modules
+/locateProperties/npm-debug.log
+/locateProperties/yarn-error.log
+
+# IDEs and editors
+/locateProperties/.idea/
+/locateProperties/.project
+/locateProperties/.classpath
+/locateProperties/.c9/
+/locateProperties/*.launch
+/locateProperties/.settings/
+/locateProperties/*.sublime-workspace
+
+# Visual Studio Code
+/locateProperties/.vscode/*
+/locateProperties/!.vscode/settings.json
+/locateProperties/!.vscode/tasks.json
+/locateProperties/!.vscode/launch.json
+/locateProperties/!.vscode/extensions.json
+/locateProperties/.history/*
+
+# Miscellaneous
+/locateProperties/.angular/cache
+/locateProperties/.sass-cache/
+/locateProperties/connect.lock
+/locateProperties/coverage
+/locateProperties/libpeerconnection.log
+/locateProperties/testem.log
+/locateProperties/typings
+
+# System files
+/locateProperties/.DS_Store
+/locateProperties/Thumbs.db
