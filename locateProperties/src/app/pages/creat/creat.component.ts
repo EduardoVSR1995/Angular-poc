@@ -4,7 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'app-creat',
   templateUrl: './creat.component.html',
-  styleUrls: ['../login/login.component.css']
+  styleUrls: ['../loginCreat.component.css']
 })
 
 export class CreatComponent {

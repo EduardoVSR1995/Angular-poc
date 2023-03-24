@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
 import { CreatComponent } from './pages/creat/creat.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { InitialPageComponent } from './pages/initial-page/initial-page.component';
 
 @NgModule({
   imports: [
@@ -13,7 +14,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      { path: '', component: LoginComponent},
+      { path: '', component: InitialPageComponent},
+      { path: 'login', component: LoginComponent},
       { path: 'create', component: CreatComponent }
     ])
   ],  
@@ -21,6 +23,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     LoginComponent,
     CreatComponent,
+    InitialPageComponent,
   ],
   bootstrap: [AppComponent]
 })
