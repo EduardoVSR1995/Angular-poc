@@ -28,32 +28,34 @@ public class Conect {
             listMethods.put(method, new String[]{ rout });
             return;
         }
-        String[] newList = listMethods.get(method);
+        String[] list = listMethods.get(method);
 
-        String[] list = Arrays.copyOf(newList, newList.length+1);
-
-        list[newList.length-1]=rout;
-
-        listMethods.put(method, list);
+        String[] newlist = Arrays.copyOf(list, list.length+1);
+        
+        newlist[list.length] = rout;
+        
+        listMethods.put(method ,newlist);
     }
 
     static class MyHandler implements HttpHandler {
-        private static Boolean veryfiMethodAndRout(String method, String rout) {        
+
+        private static String veryfiMethodAndRout(String method, String rout) {        
             String[] verifi = listMethods.get(method);
             if( verifi.length != 0 ){
-                boolean value = Arrays.asList(verifi).contains(rout);
-                if(value) return true;
+                for (int i = 0; i < verifi.length; i++) {
+                    if(verifi[i].equals(rout)) return verifi[i].toString();   
+                }
             } 
-            return false;
+            return "";
         }
     
         @Override
 		public void handle(HttpExchange exchange) throws IOException {
 		    String requestMethod = exchange.getRequestMethod();
             String rout = exchange.getRequestURI().toString();
-            boolean validation = veryfiMethodAndRout(requestMethod, rout);
+            String endRout = veryfiMethodAndRout(requestMethod, rout);
 
-            if( !validation ) throw new IllegalArgumentException("Undefined rout or method");
+            if( endRout.equals("") ) throw new IllegalArgumentException("Undefined rout or method");
 		    
             InputStream requestBody = exchange.getRequestBody();
 		    BufferedReader reader = new BufferedReader(new InputStreamReader(requestBody));
@@ -67,13 +69,12 @@ public class Conect {
             String request = requestBuilder.toString();
             
             Object object = request.format(request);
-        
-            Object objectRequest = new Metodos().allMetodos(requestMethod, object);
+            Object objectRequest = new Metodos().allMetodos(requestMethod, endRout, object);
                 
             String response = objectRequest.toString();
     
 		    exchange.getResponseHeaders().set("Content-Type", "application/json");
-		    exchange.sendResponseHeaders( 200 , response.getBytes().length);
+		    exchange.sendResponseHeaders(200 , response.getBytes().length);
 		    OutputStream responseBody = exchange.getResponseBody();
 		    responseBody.write(response.getBytes());
 		    responseBody.close();

@@ -1,48 +1,42 @@
 package conect;
 
+import contract.MethodRout;
+import controller.*;
+
 public class Metodos {
-    public Object allMetodos( String requestMethod, Object Body) {
+  private String rout;
+  private Object body;
 
-         switch (requestMethod) {
-             case "GET":
-                 return GetRequest(Body);
+    public Object allMetodos( String requestMethod, String rout,Object body) {
+         this.rout = rout;
+         this.body = body; 
+         MethodRout methodRout = new MethodRout(); 
+         if(requestMethod.equals(methodRout.getGET())) return GetRequest();
+         
+         if(requestMethod.equals(methodRout.getPOST())) return PostRequest();
 
-             case "POST":
-                return PostRequest(Body);
+         if(requestMethod.equals(methodRout.getPUT())) return PutRequest();
 
-             case "PUT":
-                return PutRequest(Body);
+         if(requestMethod.equals(methodRout.getDELETE())) return DeleteRequest();
 
-             case "DELETE":
-                return DeleteRequest(Body);
-
-             default:
-                return InvalidRequest(Body);
-         }
+         return new Object();
      }
 
-     private Object GetRequest(Object exchange){
-        //Código para lidar com requisições GET
-        return exchange;
+     private Object GetRequest(){
+      return new getController().get(this.body , this.rout);
      }
 
-     private Object PostRequest(Object exchange){
-        //Código para lidar com requisições POST
-        return exchange;
+     private Object PostRequest(){
+      return new postController().post(this.body, this.rout);
+      
     }
 
-     private Object PutRequest(Object exchange){
-        //Código para lidar com requisições PUT
-        return exchange;
+     private Object PutRequest(){
+      return new putController().put(this.body, this.rout);
+      
     }
 
-     private Object DeleteRequest(Object exchange){
-        //Código para lidar com requisições DELETE
-        return exchange;
-    }
-
-     private Object InvalidRequest(Object exchange){
-        //Código para lidar com requisições inválidas
-        return exchange;
+     private Object DeleteRequest(){
+      return new deletController().delete(this.body, this.rout);
     }    
 }
