@@ -2,21 +2,15 @@ package conect;
 
 import java.io.*;
 import java.net.*;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 
 import com.google.gson.Gson;
 import com.sun.net.httpserver.*;
 
-import contract.House;
-import contract.MethodRout;
-
 public class Conect {
 	private static HttpServer server; 
-    private static HashMap<String, String[]> listMethods;
-    private static MethodRout methodRout = new MethodRout();
-    
+    private static HashMap<String, String[]> listMethods;    
 
 	public static void Conection(int PORT)throws IOException {
         if(server == null ) {
@@ -74,12 +68,11 @@ public class Conect {
 		    }		    
            
             String request = requestBuilder.toString();
-            
-            Object object = request.format(request); 
+
+            // Object object = request.format(request); 
             
             Gson gson = new Gson();
-            
-            Object objectRequest = objectRequest = new Metodos().allMetodos(requestMethod, endRout, object);
+            Object objectRequest = objectRequest = new Metodos().allMetodos(requestMethod, endRout, request);
             
             String json = gson.toJson(objectRequest);
 

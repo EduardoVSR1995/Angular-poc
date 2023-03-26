@@ -7,6 +7,5 @@ public class App {
         new seed().cretebanck();
         new Conect().Conection(5000);
         new index().Start();
-        
     }
 }

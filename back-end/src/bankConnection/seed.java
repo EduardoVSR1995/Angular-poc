@@ -20,9 +20,7 @@ public class seed {
                 .executeQuery("SELECT * FROM user WHERE id=1;");
                 System.out.println("Database already exists.");
                 return;
-            } catch(Exception e){
-               
-            } 
+            } catch(Exception e){} 
 
             connection.createStatement()
             .execute("CREATE TABLE IF NOT EXISTS user (id INT PRIMARY KEY AUTO_INCREMENT, name varchar(30) NOT NULL, email varchar(30) NOT NULL UNIQUE, cep INT NOT NULL, password varchar(30) NOT NULL);");
@@ -54,7 +52,7 @@ public class seed {
             for (Element image : images) {
                 String src = image.attr("src");
                 PreparedStatement house = connection.prepareStatement("INSERT INTO  house (name, state, price) VALUES (?, ?, ?);", Statement.RETURN_GENERATED_KEYS);
-                house.setString(1, "Hotel beautifull");
+                house.setString(1, "House beautifull");
                 house.setString(2, stateSelect(i));
                 house.setInt(3, 500);
                 house.executeUpdate();

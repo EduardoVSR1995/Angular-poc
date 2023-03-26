@@ -8,7 +8,7 @@ public class bankConection {
     private static String url = "jdbc:mysql://localhost:4000/location";
     private static String user = "mysql";
     private static String password = "ex";
-    private static Connection connectionBack;
+    public static Connection connectionBack;
     
     public static Connection connection() throws Exception{
         try {

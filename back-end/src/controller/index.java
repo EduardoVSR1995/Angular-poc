@@ -12,6 +12,7 @@ public class index{
         new Conect().putMethod(methodRout.getPUT() ,methodRout.getHOUSE());
         new Conect().putMethod(methodRout.getPOST() ,methodRout.getLOGUIN());
         new Conect().putMethod(methodRout.getPOST() ,methodRout.getSIGNIN());
+        new Conect().putMethod(methodRout.getPOST() ,methodRout.getHOUSE());
         new Conect().putMethod(methodRout.getDELETE(), methodRout.getDELETEHOUSE());
 
         new deletController();
