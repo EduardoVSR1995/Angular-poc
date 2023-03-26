@@ -2,14 +2,21 @@ package conect;
 
 import java.io.*;
 import java.net.*;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 
+import com.google.gson.Gson;
 import com.sun.net.httpserver.*;
+
+import contract.House;
+import contract.MethodRout;
 
 public class Conect {
 	private static HttpServer server; 
     private static HashMap<String, String[]> listMethods;
+    private static MethodRout methodRout = new MethodRout();
+    
 
 	public static void Conection(int PORT)throws IOException {
         if(server == null ) {
@@ -68,17 +75,25 @@ public class Conect {
            
             String request = requestBuilder.toString();
             
-            Object object = request.format(request);
-            Object objectRequest = new Metodos().allMetodos(requestMethod, endRout, object);
-                
-            String response = objectRequest.toString();
-    
-		    exchange.getResponseHeaders().set("Content-Type", "application/json");
-		    exchange.sendResponseHeaders(200 , response.getBytes().length);
-		    OutputStream responseBody = exchange.getResponseBody();
-		    responseBody.write(response.getBytes());
-		    responseBody.close();
-		}
+            Object object = request.format(request); 
+            
+            Gson gson = new Gson();
+            
+            Object objectRequest = objectRequest = new Metodos().allMetodos(requestMethod, endRout, object);
+            
+            String json = gson.toJson(objectRequest);
+
+            socktEnd(json, exchange );
+          }
+          private void socktEnd(String objectRequest, HttpExchange exchange )throws IOException {
+              String response = objectRequest.toString();   
+              exchange.getResponseHeaders().set("Content-Type", "application/json");
+              exchange.sendResponseHeaders(200 , response.getBytes().length);
+              OutputStream responseBody = exchange.getResponseBody();
+              responseBody.write(response.getBytes());
+              responseBody.close();
+          }
+        
     }
 }
 

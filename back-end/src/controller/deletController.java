@@ -6,12 +6,12 @@ public class deletController {
     public Object delete(Object object, String rout){
       MethodRout methodRout = new MethodRout();
       
-      if(rout.equals(methodRout.getDELETEHOTEL())) return deletehotels(object);
+      if(rout.equals(methodRout.getDELETEHOUSE())) return deleteHouse(object);
 
       return new Object();
   }    
 
-  private Object deletehotels(Object object){
+  private Object deleteHouse(Object object){
       return object;
   }
 }

@@ -5,10 +5,10 @@ public final class MethodRout {
     private String DELETE = "DELETE";
     private String GET = "GET";
     private String POST = "POST";
-    private String HOTEL = "/hotel";
+    private String HOUSE = "/house";
     private String LOGUIN = "/login";
     private String SIGNIN = "/signin";
-    private String DELETEHOTEL = "/delete/hotel";
+    private String DELETEHOUSE = "/delete/house";
     public String getPUT() {
         return PUT;
     }
@@ -27,10 +27,10 @@ public final class MethodRout {
     public String getLOGUIN() {
         return LOGUIN;
     }
-    public String getHOTEL() {
-        return HOTEL;
+    public String getHOUSE() {
+        return HOUSE;
     }
-    public String getDELETEHOTEL() {
-        return DELETEHOTEL;
+    public String getDELETEHOUSE() {
+        return DELETEHOUSE;
     }
 }
