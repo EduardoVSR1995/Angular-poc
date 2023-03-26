@@ -1,6 +1,5 @@
-## Getting Started
-
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Instruçoes inicias sobre a api;
+Posui um arquivo dunp.sq de um banco completo, ao dar inicion no codigo ele ira criar e pupular o banco com seus respectivos dados nessesarios  
 
 ## Folder Structure
 
