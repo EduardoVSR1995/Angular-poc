@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS user (
+CREATE TABLE user (
     id INT PRIMARY KEY AUTO_INCREMENT, 
     name varchar(30) NOT NULL, 
     email varchar(30) NOT NULL UNIQUE, 
@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS user (
     password varchar(30) NOT NULL
     );
 
-CREATE TABLE IF NOT EXISTS house (
+CREATE TABLE house (
     id INT PRIMARY KEY AUTO_INCREMENT, 
     name Varchar(30) NOT NULL, 
     state varchar(4) NOT NULL, 
@@ -14,14 +14,14 @@ CREATE TABLE IF NOT EXISTS house (
     location BOOLEAN NOT NULL DEFAULT false
     );
 
-CREATE TABLE IF NOT EXISTS images (
+CREATE TABLE images (
     id INT PRIMARY KEY AUTO_INCREMENT, 
     url TEXT NOT NULL, 
     houseId INT NOT NULL, 
     FOREIGN KEY (houseId) REFERENCES house(id)
     );
 
-CREATE TABLE IF NOT EXISTS userHouse (
+CREATE TABLE userHouse (
     id INT PRIMARY KEY AUTO_INCREMENT, 
     houseId INT NOT NULL, 
     userId INT NOT NULL, 
