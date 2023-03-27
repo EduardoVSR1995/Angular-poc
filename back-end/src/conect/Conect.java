@@ -68,8 +68,6 @@ public class Conect {
 		    }		    
            
             String request = requestBuilder.toString();
-
-            // Object object = request.format(request); 
             
             Gson gson = new Gson();
             Object objectRequest = objectRequest = new Metodos().allMetodos(requestMethod, endRout, request);

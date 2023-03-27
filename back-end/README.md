@@ -1,5 +1,5 @@
 ## Instruçoes inicias sobre a api;
-Posui um arquivo dunp.sq de um banco completo, ao dar inicion no codigo ele ira criar e pupular o banco com seus respectivos dados nessesarios  
+Posui um arquivo dump.sql de um banco completo, ao dar inicion no codigo ele ira criar e pupular o banco com seus respectivos dados, a tambem a pasta schema.sql que possui o schema do banco. 
 
 ## Folder Structure
 

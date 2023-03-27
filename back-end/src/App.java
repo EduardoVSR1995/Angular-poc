@@ -1,6 +1,6 @@
-import bankConnection.seed;
+import bankConnection.*;
 import conect.*;
-import controller.index;
+import controller.*;
 
 public class App {
     public static void main(String[] args) throws Exception {   

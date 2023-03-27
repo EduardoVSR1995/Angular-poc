@@ -33,11 +33,7 @@ public class getController extends bankConection {
         return houses;
         
       } catch (Exception e) {
-        HashMap<String, Object> err = new HashMap<>(); 
-        ArrayList<HashMap> erro = new ArrayList<>(); 
-        err.put("Get images error.", e.toString());
-        erro.add(err);
-        return erro;
+        throw new Error(e.toString());
       }
     }
     public ArrayList<HashMap> getHouseAllImages(int id) {
@@ -58,17 +54,12 @@ public class getController extends bankConection {
           image.put("url", result.getString("url"));
           image.put("houseId", result.getInt("houseId"));
           images.add(image);
-          System.out.println(image.toString());
         }        
         
         return images;
   
        } catch (Exception e) {
-        HashMap<String, Object> err = new HashMap<>(); 
-        ArrayList<HashMap> erro = new ArrayList<>(); 
-        err.put("Get images error.", e.toString());
-        erro.add(err);
-        return erro;
+        throw new Error(e.toString());
        }
 
     }  
