@@ -53,3 +53,12 @@ Para executar o front-end, abra o terminal na pasta locateProperties e execute o
 ng serve
 ```
 Note que ainda não há integração entre o front-end e a API.
+
+## Tecnologias aplicadas
+<div styled="display: flex;">
+<img height="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="docker logo"  />
+<img height="50" src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" alt="Vscode logo"  />
+<img height="50" src="https://www.mysql.com/common/logos/logo-mysql-170x115.png" alt="docker logo"  />
+<img height="50" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/2560px-Node.js_logo.svg.png" alt="Node logo"  />
+<img height="50" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR92gl4uBPdNgsyRikflFBCotE-SmTXoBRjXw&usqp=CAU" alt="Angular logo" />
+</div>
