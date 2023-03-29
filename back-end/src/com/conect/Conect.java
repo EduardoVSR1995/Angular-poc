@@ -1,4 +1,4 @@
-package conect;
+package com.conect;
 
 import java.io.*;
 import java.net.*;

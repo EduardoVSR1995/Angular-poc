@@ -1,8 +1,8 @@
-package controller;
+package com.controller;
 
 import java.io.IOException;
-import contract.MethodRout;
-import conect.Conect;
+import com.contract.MethodRout;
+import com.conect.Conect;
 public class index{
     
     public static void Start()throws IOException {

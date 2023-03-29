@@ -1,4 +1,4 @@
-package contract;
+package com.contract;
 
 public class Cadaster extends IdName {
     private int cep;

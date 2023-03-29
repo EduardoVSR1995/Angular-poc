@@ -1,4 +1,4 @@
-package contract;
+package com.contract;
 
 public final class MethodRout {
     private String PUT = "PUT";

@@ -1,1 +1,40 @@
-<p>initial-page works!</p>
+<div class="widthScrenTotal initial center" *ngIf="itens.length > 0 ; else loading" >
+    <div class="widthScrenTotal center" *ngFor="let item of itens" >
+        <div *ngIf="imagesUrl.length === 0 ; else allImages" >
+            {{ getImage(item.id) }}
+
+        </div>
+      
+        <p>
+            {{ item.name }}
+        </p>
+        <p>
+            {{ item.state }}
+        </p>
+        <button *ngIf="item.location ; else truButton" >
+            Alugado
+        </button>       
+        
+    </div>
+</div>
+
+
+<ng-template #nomImages >
+</ng-template>
+
+
+<ng-template #allImages >
+    <img  src="imageUrl[0].url"  />
+</ng-template>
+
+<ng-template #loading>
+    <p>
+        Loading...
+    </p>
+</ng-template>
+
+<ng-template #truButton>
+    <button >
+        Alugar
+    </button>
+</ng-template>

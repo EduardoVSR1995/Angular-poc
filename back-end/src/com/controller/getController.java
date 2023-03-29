@@ -1,15 +1,15 @@
-package controller;
+package com.controller;
 
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import com.bank.bankConect;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
-import bankConnection.bankConection;
-
-public class getController extends bankConection {
+public class getController extends bankConect {
   private Connection connect = this.connectionBack;
 
   public ArrayList<HashMap> getAllHouses() {
@@ -31,7 +31,6 @@ public class getController extends bankConection {
           houses.add(house);
         }        
         return houses;
-        
       } catch (Exception e) {
         throw new Error(e.toString());
       }

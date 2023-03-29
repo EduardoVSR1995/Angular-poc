@@ -1,4 +1,4 @@
-package bankConnection;
+package com.bank;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -13,7 +13,7 @@ public class seed {
     private static Connection connection;
     public void cretebanck() throws Exception {
         try {
-            connection = new bankConection().connection();
+            connection = new bankConect().connection();
             
             try{
                 connection.createStatement()

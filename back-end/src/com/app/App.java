@@ -1,6 +1,7 @@
-import bankConnection.*;
-import conect.*;
-import controller.*;
+package com.app;
+import com.bank.*;
+import com.conect.*;
+import com.controller.*;
 
 public class App {
     public static void main(String[] args) throws Exception {   

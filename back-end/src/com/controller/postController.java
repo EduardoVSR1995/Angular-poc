@@ -1,4 +1,4 @@
-package controller;
+package com.controller;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -6,12 +6,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.HashMap;
 
-import bankConnection.bankConection;
-import contract.Cadaster;
-import contract.Login;
-import contract.MethodRout;
+import com.bank.bankConect;
+import com.contract.Cadaster;
+import com.contract.Login;
+import com.contract.MethodRout;
 
-public class postController extends bankConection{
+public class postController extends bankConect{
     private Object object;
     private Connection connect = this.connectionBack;
 

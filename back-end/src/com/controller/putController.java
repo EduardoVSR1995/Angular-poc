@@ -1,6 +1,6 @@
-package controller;
+package com.controller;
 
-import contract.MethodRout;
+import com.contract.MethodRout;
 
 public class putController {
     public Object put(Object object, String rout){

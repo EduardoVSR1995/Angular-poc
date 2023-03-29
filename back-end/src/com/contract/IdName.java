@@ -1,4 +1,4 @@
-package contract;
+package com.contract;
 
 public class IdName {
     private int id;

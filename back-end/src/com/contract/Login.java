@@ -1,4 +1,4 @@
-package contract;
+package com.contract;
 
 public class Login extends Cadaster{
     public Login(String email, String password) throws Exception {

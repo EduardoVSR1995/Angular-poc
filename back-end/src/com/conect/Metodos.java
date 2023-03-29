@@ -1,4 +1,4 @@
-package conect;
+package com.conect;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -6,8 +6,8 @@ import java.util.HashMap;
 
 import com.google.gson.Gson;
 
-import contract.*;
-import controller.*;
+import com.contract.*;
+import com.controller.*;
 
 public class Metodos {
   private String rout;

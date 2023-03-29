@@ -7,6 +7,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { CreatComponent } from './pages/creat/creat.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InitialPageComponent } from './pages/initial-page/initial-page.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import { InitialPageComponent } from './pages/initial-page/initial-page.componen
       { path: '', component: InitialPageComponent},
       { path: 'login', component: LoginComponent},
       { path: 'create', component: CreatComponent }
-    ])
+    ]),
+    HttpClientModule,
   ],  
   declarations: [
     AppComponent,
