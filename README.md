@@ -38,6 +38,15 @@ A API possui três rotas funcionais:
 ```
 
 - GET /house: retorna todas as casas cadastradas.
+
+- POST /house: retorna todas as imagens das casas cadastradas cadastradas. O corpo da requisição deve conter os seguintes campos em formato JSON:
+```
+{
+    "id": "id da casa"
+}
+```
+
+
 ## Executando a API
 Para executar a API, abra o arquivo App.java em seu editor de preferência e inicie a aplicação.
 
