@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-initial-page',
@@ -10,7 +9,6 @@ import { Observable } from 'rxjs';
 
 export class InitialPageComponent{
   itens: Array<any> = [];
-  imagesUrl: Array<{url: string}> = [];
 
   constructor( 
     private http: HttpClient 
@@ -22,9 +20,5 @@ export class InitialPageComponent{
         this.itens = i as any[];
       });
   };
-  getImage (id: number ){
-    console.log(id);
-    this.http.post<{url: string}[]> ('/api/house', { id })
-      .subscribe(i => this.imagesUrl=i );
-    }
+  
 }

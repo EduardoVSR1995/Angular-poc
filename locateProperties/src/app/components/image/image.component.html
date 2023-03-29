@@ -1,0 +1,11 @@
+<div class="images" *ngIf="imagesUrl.length !== 0 ; else loading" >
+    <div *ngFor="let image of imagesUrl" >
+        <img src={{image.url}} >
+    </div>
+</div>
+
+<ng-template #loading >
+    <p>
+        Loading...
+    </p>
+</ng-template>

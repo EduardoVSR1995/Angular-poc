@@ -1,0 +1,16 @@
+.images{
+    width: 160px;
+    height: 160px;
+    overflow: auto;
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+    overflow: -moz-scrollbars-none;
+}
+.images::-webkit-scrollbar {
+    display: none;
+  } 
+
+.images > div > img{
+    width: 150px;
+    height: 150px;
+}

@@ -8,6 +8,7 @@ import { CreatComponent } from './pages/creat/creat.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InitialPageComponent } from './pages/initial-page/initial-page.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ImageComponent } from './components/image/image.component';
 
 @NgModule({
   imports: [
@@ -26,6 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     CreatComponent,
     InitialPageComponent,
+    ImageComponent,
   ],
   bootstrap: [AppComponent]
 })
